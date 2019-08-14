@@ -1,0 +1,14 @@
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href ="index.php" class ="navbar-brand">Shop</a>
+    <button class ="navbar-toggler" type="button" data-toggle ="#main-nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class ="collapse navbar-collapse" id="main-nav">
+    <nav class ="nav navbar-nav">
+        {%for item in navigation.items %}
+        {% set active = (navigation.active == item.url) ? 'active' : '' %}
+            <a href="{{item.url}}" class="nav-link {{active}}">{{item.menu}}</a>
+        {% endfor %}
+    </nav>
+    </div>
+</div>
