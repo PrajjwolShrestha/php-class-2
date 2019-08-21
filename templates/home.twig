@@ -6,15 +6,23 @@
     {%include 'partials/navigation.twig' %}
         <main class="container-fluid">
             <div class="row">
-            {% for product in products %}
-                <div class="col-md-3">
-                    <img class="img-fluid" src="images/products/{{product.image}}">
-                    <h4 class="product-name">{{product.name}}</h4>
-                    <h6 class="product-price">{{product.price}}</h6>
-                    <p class="product-description">{{product.description | slice(0,100) ~ '...' }}</p>
-                    <a href="detail.php?product_id={{product.product_id}}">Detail</a>
+                <div class="col-md-2">
+                {% include 'partials/category.twig' %}
                 </div>
-            {% endfor %}
+                <div class="col-md-10">
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-md-3">
+                                <img class="img-fluid" src="images/products/{{product.image}}">
+                                <h4 class="product-name">{{product.name}}</h4>
+                                <h6 class="product-price">{{product.price}}</h6>
+                                <p class="product-description">{{product.description | slice(0,100) ~ '...' }}</p>
+                                <a href="detail.php?product_id={{product.product_id}}">Detail</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            
             </div>
             
         </main>
