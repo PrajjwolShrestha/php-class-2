@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2019 at 08:06 AM
+-- Generation Time: Sep 25, 2019 at 07:37 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -43,6 +43,7 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`account_id`, `email`, `password`, `created`, `accessed`, `updated`, `active`) VALUES
+(0xc26ef34bdf3d7a8e4bacc3d990cca153, 'website@localhost.com', '$2y$10$.5ZDJOH3vdu1VBSVFGJ4a.w5oMc/VzhMAAKTq8jXQINsE.U4gND8.', '2019-09-25 04:27:20', '2019-09-25 04:27:20', '2019-09-25 04:27:20', 1),
 (0xd09a3da1dd5e360c858a450b0c3449d5, '6893@ait.nsw', '$2y$10$8/r0T6y5xla8Vcuw1TiTNOSWQ2wIzeafIqJY8Q8OIt5uyLy.J554e', '2019-09-18 06:05:27', '2019-09-18 06:05:27', '2019-09-18 06:05:27', 1);
 
 -- --------------------------------------------------------
@@ -136,58 +137,57 @@ INSERT INTO `image` (`image_id`, `image_file_name`, `date_added`, `caption`, `ac
 --
 
 CREATE TABLE `imagelist` (
-  `imageId` int(11) DEFAULT NULL,
-  `imageSourceLink_gDrive` varchar(66) CHARACTER SET utf8 DEFAULT NULL
+  `imageId` int(11) NOT NULL,
+  `imagepath` varchar(256) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `imagelist`
 --
 
-INSERT INTO `imagelist` (`imageId`, `imageSourceLink_gDrive`) VALUES
-(0, NULL),
-(1, 'https://drive.google.com/open?id=1oTWNU4ptyvA1BG9OS5qELm-QgKMoed0m'),
-(2, 'https://drive.google.com/open?id=1x76AjsHmR0mMzUztrQzQ_DQ3nEytGccM'),
-(3, 'https://drive.google.com/open?id=14h9_jemKVCCnWWTPJbcsVFjOdxsDeetJ'),
-(4, 'https://drive.google.com/open?id=1PIQ9LCLAITl1ynS7ljmd3UI-1g_r729H'),
-(5, 'https://drive.google.com/open?id=1j1HA29tZ8HNOsRCT8jpVJeK5os6I_u3d'),
-(6, 'https://drive.google.com/open?id=12oYHROz-0q2iotFhw8chQB1xcnoZXb5x'),
-(7, 'https://drive.google.com/open?id=1b9BiJ1ZNu7w7gEcNRArL5z5bRQeYaKXY'),
-(8, 'https://drive.google.com/open?id=1zh5WxaMc0Fr72ncuMWg3wkMz2fockkcm'),
-(9, 'https://drive.google.com/open?id=1UoCozcYAZ1uimAfNy2wg12mW8yrMNVgu'),
-(10, 'https://drive.google.com/open?id=1M72M8cT1BWvb4757ilWpVnHuhi_Iy_wb'),
-(11, 'https://drive.google.com/open?id=1n2ZmIrtprbkMbeF3UeR81_Zy6829kzjY'),
-(12, 'https://drive.google.com/open?id=1QMT35e3pWBVpI1sLR4qtWxTXDtVwAXdP'),
-(13, 'https://drive.google.com/open?id=1bxTOV9jl36vIblaf395yGSntUnBVIGcF'),
-(14, 'https://drive.google.com/open?id=1q8lpvPLrbThUcuIPwIsZnrwADYce2kRp'),
-(15, 'https://drive.google.com/open?id=1MTfFUQ1jlEheMlz93NuPQm-47cC7FgK_'),
-(16, 'https://drive.google.com/open?id=1HeWa74QHoOFsU89Hlh0hv7Yyv16wePzR'),
-(17, 'https://drive.google.com/open?id=1yALbaSOZfyfv3cGfg25JIPP4rcSoGDkZ'),
-(18, 'https://drive.google.com/open?id=1CYlI-YlLGB1BDCfAaZNF331imTLZZPGD'),
-(19, 'https://drive.google.com/open?id=1Oca0r0acU3tfi8xcOmUpfbT4fSgxesUI'),
-(20, 'https://drive.google.com/open?id=1wkzDQG-f9OPByejAmiXRHC4MQ-Nqwlrf'),
-(21, 'https://drive.google.com/open?id=1si7bxjZ48rfXXrTPh2sMHkBzYRIhY9Fe'),
-(22, 'https://drive.google.com/open?id=1KKHuQ6DJpesA6RPGg8bCsksG1TzUdZbN'),
-(23, 'https://drive.google.com/open?id=1YLCzbnoW67QExUsM0PAo9lqgnbIpT3Te'),
-(24, 'https://drive.google.com/open?id=1Oan-YSHV4R0ZxQO8-MIBxAhbggf7-Bef'),
-(25, 'https://drive.google.com/open?id=1RlM4VTFp0_JNKby9FWtFMp0Kk9sfUbmE'),
-(26, 'https://drive.google.com/open?id=12NQBqnu8a9fV9G_j5a0M7SofMZ0DvbYM'),
-(27, 'https://drive.google.com/open?id=1HuSC7bqFlj1DT-pBx1xO4rSCkJcQCb-D'),
-(28, 'https://drive.google.com/open?id=1oGGiX9h6I4-ZzxRg3GyjE2a1VP6_K3yO'),
-(29, 'https://drive.google.com/open?id=11kkA64XUltNXSSKt-NIBfszSHPqtBjvQ'),
-(30, 'https://drive.google.com/open?id=1y_Zo7Vp38UZGuLdRQ7A81qzuvJx9kQhY'),
-(31, 'https://drive.google.com/open?id=1yzWJNFiI0DAq6PtjM_oaMU8cZ6LfvkhT'),
-(32, 'https://drive.google.com/open?id=1f-oVINMYt9-rX3IjJ2wokkqqunYmCmcU'),
-(33, 'https://drive.google.com/open?id=1kjua03YiwQ_n3GNzg_NcqhCdzyHTD4ji'),
-(34, 'https://drive.google.com/open?id=1Fn2qUUJqzGvmYdd72b6Wif8bYrAc-u1Z'),
-(35, 'https://drive.google.com/open?id=1cthqQDvdgLURN0ic1ThzJoXAY4BDgK6Z'),
-(36, 'https://drive.google.com/open?id=1gyCa-sZsq9WjCQNAzvMp5HSkIr1PexRz'),
-(37, 'https://drive.google.com/open?id=1WpPCyEqCGfjxIigxkgvLgM8L1J5Za42i'),
-(38, 'https://drive.google.com/open?id=1WxEAkhoqMQRhaBiFp-YX02fre1wfkKY1'),
-(39, 'https://drive.google.com/open?id=1MhpEAS9b56KpZwcgqvHNMdMVC6Go1YEK'),
-(40, 'https://drive.google.com/open?id=16KN5VpAQyuD73lQXuXYY3vRBW4fRzVrs'),
-(41, 'https://drive.google.com/open?id=10PfHUEhnoaYEPVfuqJkHNhldu3MT69PW'),
-(42, 'https://drive.google.com/open?id=1pZemjOIOjq6B_I6upt2jlEHUxeNwNZcU');
+INSERT INTO `imagelist` (`imageId`, `imagepath`) VALUES
+(1, 'Hahn Superdry.png'),
+(2, 'Hahn Premium Light.png'),
+(3, 'Hahn SuperDry 3.5%.png'),
+(4, 'Hahn SuperDry 3.5% Cans 30 Block 375mL.png'),
+(5, 'Hahn Ultra Crisp Gluten Free Bottles 330mL.png'),
+(6, 'Penfolds Bin 407 Cabernet Sauvignon 2017.png'),
+(7, 'Penfolds Grange 2015.png'),
+(8, 'Penfolds Bin 389 Cabernet Shiraz 2017.png'),
+(9, 'Penfolds St Henri Shiraz 2016.png'),
+(10, 'Penfolds Kalimna Bin 28 Shiraz 2017.png'),
+(11, 'Penfolds RWT Barossa Valley Shiraz 2017.png'),
+(12, 'Penfolds Bin 23 Pinot Noir 2018.png'),
+(13, 'Penfolds Bin 128 Coonawarra Shiraz 2017.png'),
+(14, 'Penfolds Bin 150 Marananga Shiraz 2017.png'),
+(15, 'Penfolds Bin 138 Shiraz Grenache Mataro 2017.png'),
+(16, 'Penfolds Bin 311 Chardonnay 2018.png'),
+(17, 'Penfolds Bin 51 Eden Valley Riesling 2019.png'),
+(18, 'Penfolds Reserve Bin A Chardonnay 2018.png'),
+(19, 'Penfolds Magill Estate Shiraz 2017.png'),
+(20, 'Penfolds Yattarna Chardonnay 2017.png'),
+(21, 'Furphy Refreshing Ale Cans 375mL.png'),
+(22, 'Furphy Refreshing Ale Bottles 750ml.png'),
+(23, 'Furphy Refreshing Ale Can 30 Block 375mL.png'),
+(24, 'Guinness Extra Stout 750mL.png'),
+(25, 'Guinness Extra Stout Bottles 375mL.png'),
+(26, 'Guinness Foreign Extra Stout 7.5%.png'),
+(27, 'Lagavulin 16 Year Old Scotch Whisky 700mL.png'),
+(28, 'Dimple 15 Year Old Scotch Whisky 700mL.png'),
+(29, 'Dimple 12 Year Old Scotch Whisky 700mL.png'),
+(30, 'Glenfiddich 12 Year Old Single Malt Scotch Whisky 700mL.png'),
+(31, 'Blanton\'s Single Barrel Gold Edition Kentucky Straight Bourbon 700mL.png'),
+(32, 'Blanton\'s Single Barrel Special Reserve Kentucky Straight Bourbon 700mL.png'),
+(33, 'Stoneleigh Wild Valley Sauvignon Blanc.png'),
+(34, 'Stoneleigh Wild Valley Pinot Noir.png'),
+(35, 'Stoneleigh Rapaura Pinot Gris.png'),
+(36, 'Stoneleigh Pinot Gris.png'),
+(37, 'Stoneleigh Rapaura Pinot Noir.png'),
+(38, 'Stoneleigh Chardonnay.png'),
+(39, 'Stoneleigh Pinot Noir.png'),
+(40, 'Moët & Chandon Brut Impérial Champagne NV.png'),
+(41, 'Jacob\'s Creek Chardonnay Pinot Noir.png'),
+(42, 'Mumm Cordon Rouge Brut NV.png');
 
 -- --------------------------------------------------------
 
@@ -353,7 +353,6 @@ CREATE TABLE `productlist` (
 --
 
 INSERT INTO `productlist` (`productId`, `variental`, `productName`, `liquorSize_mL`, `standardDrinks`, `alcoholVolume_percent`, `countryOrigin`, `age_yo`, `brandName`, `closure`, `beerStyle`, `wineStyle`, `wineBody`, `pricePerCaseOfSix`, `pricePerBottle`, `whiskyStyle`, `productDetails`) VALUES
-(0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '40.00', '8.00', NULL, NULL),
 (1, 'Low Carb Beer', 'Hahn Superdry', 330, '1.2', '4.6', 'Australia', NULL, 'Hahn', NULL, 'Lager', NULL, NULL, '35.00', '7.00', NULL, 'Hahn SuperDry is brewed by combining the best of modern brewing technology with the finest ingredients, resulting in a full flavoured, crisp and refreshing low carb beer. The long brewing process breaks down more of the natural sugars to deliver a genuine SuperDry taste, with only a third of the carbs you\'ll find in other full-strength beers.'),
 (2, 'Light Beer', 'Hahn Premium Light', 375, '0.7', '2.4', 'Australia', NULL, 'Hahn', NULL, 'Lager', NULL, NULL, '36.00', '6.00', NULL, 'Hahn Premium Light is a superior tasting liquid that has been passionately brewed using the best of modern technology and the finest natural ingredients. A full flavoured, crisp and refreshing taste, with less alcohol than regular beers at just 2.4%. So whatever else is going on in your life, you can still treat yourself to full flavoured refreshment whether you’re out with your mates or enjoying a quiet one at home.'),
 (3, 'Mid Strength Beer', 'Hahn SuperDry 3.5%', 330, '0.9', '3.5', 'Australia', NULL, 'Hahn', NULL, 'Lager', NULL, NULL, '34.00', '7.00', NULL, 'Hahn SuperDry 3.5 is brewed by combining the best of modern brewing technology with the finest ingredients, resulting in a full flavoured, crisp and refreshing low carb beer. It is brewed with extreme slowness, a similar way to how Hahn create the full-strength SuperDry, to deliver the same SuperDry taste with just 3.5% alcohol.'),
@@ -1079,6 +1078,12 @@ ALTER TABLE `image`
   ADD UNIQUE KEY `image_file_name` (`image_file_name`);
 
 --
+-- Indexes for table `imagelist`
+--
+ALTER TABLE `imagelist`
+  ADD PRIMARY KEY (`imageId`);
+
+--
 -- Indexes for table `page`
 --
 ALTER TABLE `page`
@@ -1130,6 +1135,12 @@ ALTER TABLE `category`
 --
 ALTER TABLE `image`
   MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `imagelist`
+--
+ALTER TABLE `imagelist`
+  MODIFY `imageId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `page`
